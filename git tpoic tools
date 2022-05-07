@@ -1,0 +1,11 @@
+git add .
+
+files will be added to staging area
+
+git commit -m "COMMIT msg"
+
+files will be added to local repository
+
+git push
+
+files will be moved to remote repository
