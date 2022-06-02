@@ -1,44 +1,37 @@
-# Test jenkins file
+pipeline {
+    agent any
 
-
-pipeline{
-
-agent any
-
-stages{
-
-
-stage('Develop')
-
-{
-steps{
-echo "Develop"
-}
-
-}
-  
-  
-
-stage('Test')
-
-{ 
-steps{ 
-echo "Testing"
-
-}
-
-}
-
-
-
-stage('Deploy') {
-
-steps{
-echo "Deploy to production"
-
-}
-}
-
-}
-
+    stages {
+        stage('Git clone') {
+            steps {
+                echo 'Clonning the Repository'
+            }
+        }
+            
+             stage('Build') {
+            steps {
+                echo 'Building the code'
+            }
+        }
+        
+        
+         stage('Test') {
+            steps {
+                echo 'Testing the code'
+            }
+            
+            }
+            
+            
+             stage('Deploy') {
+            steps {
+                echo 'Deploying  the code'
+            }
+            
+            }
+            
+            
+            
+            
+    }
 }
